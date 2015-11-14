@@ -1,0 +1,58 @@
+<h1>New talent</h1>
+<%= form_for @talent do |f| %>
+ 
+  <% if @talent.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@talent.errors.count, "error") %> prohibited
+        this talent from being saved:
+      </h2>
+      <ul>
+        <% @talent.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :FName %><br>
+    <%= f.text_field :FName %>
+  </p>
+
+  <p>
+    <%= f.label :LName %><br>
+    <%= f.text_field :LName %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :portfolioLink %><br>
+    <%= f.text_field :portfolioLink %>
+  </p>
+
+  <p>
+    <%= f.label :linkedinLink %><br>
+    <%= f.text_field :linkedinLink %>
+  </p>  
+
+  <p>
+    <%= f.label :resume %><br>
+    <%= f.text_field :resume %>
+  </p>
+
+  <p>
+    <%= f.label :video %><br>
+    <%= f.text_field :video %>
+  </p>
+
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
