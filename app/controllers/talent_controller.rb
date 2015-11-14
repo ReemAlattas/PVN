@@ -1,5 +1,6 @@
 class TalentController < ApplicationController
-	def index
+	
+  def index
     @taelents = Talent.all
   end
  
@@ -29,7 +30,7 @@ class TalentController < ApplicationController
   end
  
   private
-    def article_params
-      params.require(:talent).permit(:title, :text)
+    def talent_params
+      params.require(:talent).permit(:email)
     end
 end
