@@ -1,4 +1,4 @@
-class TalentController < ApplicationController
+class TalentsController < ApplicationController
 	
   def index
     @taelents = Talent.all
