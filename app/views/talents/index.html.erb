@@ -1,0 +1,30 @@
+<h1>Listing Talents</h1>
+<%= link_to 'New talent', new_talent_path %>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Portfolio Link</th>
+    <th>LinkedIn Link</th>
+    <th>Resume</th>
+    <th>Video</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @talents.each do |talent| %>
+    <tr>
+      <td><%= talent.FName %></td>
+      <td><%= talent.LName %></td>
+      <td><%= talent.email %></td>
+      <td><%= talent.portfolioLink %></td>
+      <td><%= talent.linkedinLink %></td>
+      <td><%= talent.resume %></td>
+      <td><%= talent.video %></td>
+      <td><%= link_to 'Show', talent_path(talent) %></td>
+      <td><%= link_to 'Destroy', performer_path(talent),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
