@@ -22,12 +22,12 @@ class TalentController < ApplicationController
     end
   end
  
-  def destroy
-    @talent = Talent.find(params[:id])
-    @talent.destroy
+  # def destroy
+  #   @talent = Talent.find(params[:id])
+  #   @talent.destroy
  
-    redirect_to talents_path
-  end
+  #   redirect_to talents_path
+  # end
  
   private
     def talent_params
