@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112182718) do
+ActiveRecord::Schema.define(version: 20151115205640) do
 
   create_table "talents", force: :cascade do |t|
     t.string   "FName"
@@ -21,8 +21,12 @@ ActiveRecord::Schema.define(version: 20151112182718) do
     t.string   "linkedinLink"
     t.text     "resume"
     t.string   "video"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
 end
