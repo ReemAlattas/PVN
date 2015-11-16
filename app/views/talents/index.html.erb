@@ -7,9 +7,7 @@
     <th>Email</th>
     <th>Portfolio Link</th>
     <th>LinkedIn Link</th>
-    <th>Resume</th>
-    <th>Video</th>
-    <th colspan="2"></th>
+    <th colspan="3"></th>
   </tr>
 
   <% @talents.each do |talent| %>
@@ -19,8 +17,7 @@
       <td><%= talent.email %></td>
       <td><%= talent.portfolioLink %></td>
       <td><%= talent.linkedinLink %></td>
-      <td><%= talent.resume %></td>
-      <td><%= talent.video %></td>
+      <td><%= link_to 'Resume', talent.resume.url %></td>
       <td><%= link_to 'Show', talent_path(talent) %></td>
       <td><%= link_to 'Destroy', talent_path(talent),
               method: :delete,

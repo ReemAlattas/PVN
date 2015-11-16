@@ -25,13 +25,8 @@
 </p>
 
 <p>
-  <strong>Resume:</strong>
-  <%= link_to resume_tag(talent.resume.url, class: 'media-object'), talent.resume.url, target: '_blank' %>
+  <%= link_to 'Resume', @talent.resume.url %>
 </p>
 
-<p>
-  <strong>Video:</strong>
-  <%= @talent.video %>
-</p>
 
 <%= link_to 'Back', talents_path %>
