@@ -1,0 +1,42 @@
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+ 
+<p>
+  <strong>Website:</strong>
+  <%= @company.website %>
+</p>
+
+<p>
+  <strong>Contact Name:</strong>
+  <%= @company.contactName %>
+</p>
+
+<p>
+  <strong>Contact Email:</strong>
+  <%= @company.contactEmail %>
+</p>
+
+<p>
+  <strong>Contact Phone:</strong>
+  <%= @company.contactPhone %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @company.bio %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @company.video %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= image_tag @company.logo.url %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

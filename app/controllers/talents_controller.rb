@@ -16,7 +16,7 @@ class TalentsController < ApplicationController
     @talent = Talent.new(talent_params)
  
     if @talent.save
-      redirect_to @talent
+      redirect_to @talent #Change here
     else
       render 'new'
     end
