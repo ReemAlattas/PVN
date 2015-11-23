@@ -14,13 +14,29 @@ class TalentsController < ApplicationController
   
   def create
     @talent = Talent.new(talent_params)
- 
+
     if @talent.save
-      redirect_to @talent #Change here
+      binding.pry
+      redirect_to talents_newform2_url(@talent.id)
     else
       render 'new'
     end
   end
+
+  # def newform2
+  #   binding.pry
+  #   @talent = Talent.find(params[:id])
+  # end
+
+  # def createForm2
+  #   @talent = Talent.new(talent_params)
+ 
+  #   if @talent.save
+  #     redirect_to @talent #Change here
+  #   else
+  #     render 'new'
+  #   end
+  # end
  
   def destroy
     @talent = Talent.find(params[:id])

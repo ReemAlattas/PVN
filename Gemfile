@@ -13,6 +13,7 @@ gem 'pg', '~> 0.18.3'
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
 end
 
 group :development do
